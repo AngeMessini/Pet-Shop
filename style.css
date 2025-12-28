@@ -200,3 +200,55 @@ body {
     border-top: 1px solid #eee;
     padding-top: 30px;
 }
+/* --- Hamburger Menu Styling --- */
+.menu-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background: #333;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* When checkbox is checked, show the menu */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+/* Fix for the "Squished" look in your screenshot */
+.about-container {
+    max-width: 800px;
+    margin: 50px auto; /* Adds space between hero and story */
+    padding: 0 20px;
+    text-align: center;
+}
