@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Perfect Haul Co. | Puppy Fashion</title>
+    <title>The Pawfect Haul Co. | Puppy Fashion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">The Perfect Haul Co.</div>
+        <div class="logo">The Pawfect Haul Co.</div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Shop All</a></li>
+            <li><a href="#lucky-scoops" class="lucky-link">Pawfect Lucky Scoops™</a></li>
+            <li><a href="#wear">Pawfect Wear</a></li>
+            <li><a href="#accessories">Pawfect Accessories</a></li>
+            <li><a href="#sale" class="sale-link">Sale</a></li>
             <li><a href="#" class="login-link">Login</a></li>
-            <li><a href="#" class="signup-btn">Sign Up</a></li>
             <li><a href="#" class="cart-btn">Cart (0)</a></li>
         </ul>
     </nav>
@@ -23,24 +25,23 @@
         <div class="hero-content">
             <h1>The Perfect Haul for Your Best Friend</h1>
             <p>Handmade dog sweaters and accessories.</p>
-            <a href="#shop" class="cta-button">Shop Now</a>
+            <a href="#lucky-scoops" class="cta-button">Shop Now</a>
         </div>
     </header>
 
     <section class="about-section" id="our-story">
         <div class="about-container">
-            
             <div class="story-block">
                 <h2>Our Story</h2>
                 <p class="subtitle">Meet Shontrice, Ange, & Faye</p>
                 <p>The Pawfect Haul Co was founded by husband-and-wife duo <strong>Shontrice and Ange</strong>, inspired by the one who truly runs the house—our dog, <strong>Faye</strong>.</p>
-                <p>Like so many pet parents, we found ourselves constantly picking up toys, treats, and cute outfits for Faye—just because. Every new item felt like a little celebration. That joy sparked a bigger idea: why shouldn’t every pet get that same feeling?</p>
+                <p>Watching Faye's excitement reminded us how much joy pets bring into our lives. That joy sparked a bigger idea: why shouldn’t every pet get that same feeling?</p>
             </div>
 
             <div class="mission-block">
                 <h3>Our Belief</h3>
                 <p class="highlight-text">Pets deserve to be spoiled just as much as we do.</p>
-                <p>At The Pawfect Haul Co, we specialize in curated pet hauls. Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable. Each scoop reveals a surprise item, making every order unique and every unboxing exciting.</p>
+                <p>Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable. Each scoop reveals a surprise item, making every order unique and every unboxing exciting.</p>
             </div>
 
             <div class="focus-points">
@@ -59,28 +60,54 @@
             </div>
         </div>
     </section>
+
     <main id="shop" class="product-section">
-        <h2>Featured Collection</h2>
+        
+        <h2 id="lucky-scoops">Pawfect Lucky Scoops™</h2>
+        <div class="product-grid">
+            <div class="product-card lucky-card">
+                <div class="product-image-container">
+                    <span class="faye-badge">Faye's Choice 🐾</span>
+                    <div class="mystery-image">✨🎁✨</div>
+                </div>
+                <h3>Signature Lucky Scoop</h3>
+                <p>A surprise mystery haul!</p>
+                <p class="price">$15.00</p>
+                <button class="add-to-cart">Get Scooped!</button>
+            </div>
+        </div>
+
+        <h2 id="wear" style="margin-top: 50px;">Pawfect Wear</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://placedog.net/500/500" alt="Cozy Winter Sweater" class="product-img">
+                <div class="product-image-container">
+                    <img src="https://placedog.net/500/500" alt="Cozy Winter Sweater">
+                </div>
                 <h3>Cozy Winter Sweater</h3>
                 <p>$24.99</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
+            <div class="product-card" id="sale">
+                <div class="product-image-container">
+                    <span class="faye-badge" style="background: #e74c3c;">SALE</span>
+                    <div class="product-image">🌧️</div>
+                </div>
+                <h3>Yellow Raincoat</h3>
+                <p><del>$35.00</del> $30.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2 id="accessories" style="margin-top: 50px;">Pawfect Accessories</h2>
+        <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">🎀</div>
                 <h3>Silk Bow Tie</h3>
                 <p>$12.00</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-            <div class="product-card">
-                <div class="product-image">🌧️</div>
-                <h3>Yellow Raincoat</h3>
-                <p>$30.00</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
         </div>
+
     </main>
 
     <div class="login-container">
@@ -88,8 +115,8 @@
             <h3>Welcome Back!</h3>
             <input type="email" placeholder="Email Address">
             <input type="password" placeholder="Password">
-            <button class="buy-button">Login to My Account</button>
-            <p>New here? <a href="#">Create an account</a></p>
+            <button class="buy-button" style="background: #ff7eb9; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer;">Login</button>
+            <p style="margin-top: 15px;">New here? <a href="#">Create an account</a></p>
         </div>
     </div>
 
