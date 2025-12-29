@@ -14,3 +14,21 @@ window.addEventListener('click', (e) => {
         loginModal.style.display = 'none';
     }
 });
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+        }
+    }
+}
+
+// Run once on load to show items already in view
+reveal();

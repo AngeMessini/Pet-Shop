@@ -1,127 +1,154 @@
-/* --- Global Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #fff;
+    background-color: #fdfdfd;
     color: #333;
     line-height: 1.6;
 }
 
-/* --- Navigation & Pink Branding --- */
+/* --- Navigation --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 20px 8%;
     background: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 1.5rem;
+    color: #ff7eb9;
     font-weight: bold;
-    color: #ff7eb9; /* Signature Pink */
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
     list-style: none;
+    gap: 25px;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333;
+    font-size: 0.85rem;
     font-weight: 500;
+    transition: 0.3s;
 }
 
-.lucky-link {
-    color: #ff7eb9 !important;
-    font-weight: bold;
+.nav-links a:hover {
+    color: #ff7eb9;
 }
 
-/* --- Hero Banner (Pink Background) --- */
+/* --- Hero Banner --- */
 .hero {
-    background-color: #ffe3ed; /* Soft Pink Banner */
-    padding: 100px 5%;
+    background-color: #ffe3ed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding-bottom: 80px; /* Space for the overlapping card */
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
     margin-bottom: 10px;
+    color: #2d3436;
 }
 
 .cta-button {
     display: inline-block;
     background-color: #ff7eb9;
     color: white;
-    padding: 12px 25px;
+    padding: 14px 35px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 50px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
-/* --- Story Section (Centering Fix) --- */
+/* --- The Floating Story Card --- */
 .about-section {
-    padding: 80px 5%;
+    padding: 0 5% 60px;
+    margin-top: -120px; /* This makes the card overlap the pink banner */
 }
 
 .about-container {
-    max-width: 800px; /* Prevents text from stretching across screen */
-    margin: 0 auto;   /* Centers the block */
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px 50px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.06);
+}
+
+.pink-text { color: #ff7eb9; }
+
+.focus-box {
+    background-color: #fff0f6;
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: left;
+    margin: 35px 0;
+}
+
+.focus-box ul { list-style: none; }
+.focus-box li { margin-bottom: 12px; font-weight: 500; }
+
+/* --- Product Sections --- */
+.product-section {
+    padding: 60px 8%;
     text-align: center;
 }
 
-.story-block h2 {
-    font-size: 2.5rem;
+.product-section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 350px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.img-container {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
-.subtitle {
-    color: #ff7eb9;
-    font-weight: bold;
-}
-
-.focus-points ul {
-    list-style: none;
-    display: inline-block;
-    text-align: left;
-    margin: 30px 0;
-    padding: 25px;
-    background: #fff0f6; /* Very light pink background for points */
-    border-radius: 15px;
-}
-
-/* --- Product Image & Scoop Fix --- */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px 5%;
-}
-
-.product-image-container {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    border-radius: 15px;
-    position: relative;
-    background: #f9f9f9;
-}
-
-.product-img {
+.img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures pawfect-scoop.png looks high-end */
+    object-fit: cover;
 }
 
 .faye-badge {
@@ -130,28 +157,17 @@ body {
     left: 15px;
     background: #ff7eb9;
     color: white;
-    padding: 5px 12px;
+    font-size: 0.75rem;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.8rem;
     font-weight: bold;
-    z-index: 10;
 }
 
-/* --- Mobile Menu Logic --- */
-.menu-toggle, .hamburger { display: none; }
-
-@media (max-width: 768px) {
-    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 30px; height: 4px; background: #333; border-radius: 2px; }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .menu-toggle:checked ~ .nav-links { display: flex; }
+.buy-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
 }

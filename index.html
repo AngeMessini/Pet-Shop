@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pawfect Haul Co. | Puppy Fashion</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">The Pawfect Haul Co.</div>
-        
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#lucky-scoops" class="lucky-link">Pawfect Lucky Scoops™</a></li>
+            <li><a href="#lucky-scoops">Pawfect Lucky Scoops™</a></li>
             <li><a href="#wear">Pawfect Wear</a></li>
             <li><a href="#accessories">Pawfect Accessories</a></li>
-            <li><a href="#sale" class="sale-link">Sale</a></li>
+            <li><a href="#sale">Sale</a></li>
+            <li><a href="#" class="login-link">Login</a></li>
         </ul>
     </nav>
 
@@ -35,67 +29,59 @@
         </div>
     </header>
 
-    <section class="about-section" id="our-story">
+    <section class="about-section">
         <div class="about-container">
-            <div class="story-block">
-                <h2>Our Story</h2>
-                <p class="subtitle">Meet Shontrice, Ange, & Faye</p>
-                <p>The Pawfect Haul Co was founded by husband-and-wife duo <strong>Shontrice and Ange</strong>, inspired by the one who truly runs the house—our dog, <strong>Faye</strong>.</p>
-                <p>Watching Faye's excitement reminded us how much joy pets bring into our lives. That joy sparked a bigger idea: why shouldn’t every pet get that same feeling?</p>
-            </div>
+            <h2 class="section-title pink-text">Our Story</h2>
+            <p class="subtitle pink-text">Meet Shontrice, Ange, & Faye</p>
+            <p>The Pawfect Haul Co was founded by husband-and-wife duo <strong>Shontrice and Ange</strong>, inspired by the one who truly runs the house—our dog, <strong>Faye</strong>.</p>
+            <p>Watching Faye's excitement reminded us how much joy pets bring into our lives. That joy sparked a bigger idea: why shouldn't every pet get that same feeling?</p>
+            
+            <h2 class="section-title pink-text" style="margin-top: 40px;">Our Belief</h2>
+            <p><strong>Pets deserve to be spoiled just as much as we do.</strong></p>
+            <p>At The Pawfect Haul Co, we specialize in curated pet hauls. Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable. Each scoop reveals a surprise item, making every order unique and exciting.</p>
 
-            <div class="mission-block">
-                <h3>Our Belief</h3>
-                <p class="highlight-text">Pets deserve to be spoiled just as much as we do.</p>
-                <p>Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable. Each scoop reveals a surprise item, making every order unique and exciting.</p>
-            </div>
-
-            <div class="focus-points">
+            <div class="focus-box">
                 <ul>
                     <li>✨ Thoughtfully selected pet products</li>
                     <li>🎁 Fun, interactive shopping experiences</li>
-                    <li>🎀 Stylish pet wear you’ll actually love</li>
+                    <li>🎀 Stylish pet wear you'll actually love</li>
                     <li>🐾 Spoiling pets in the most pawfect way possible</li>
                 </ul>
             </div>
 
-            <div class="love-letter">
-                <p>This isn’t just a business for us. It’s a love letter to Faye—and to pets everywhere.</p>
-                <h4>Welcome to The Pawfect Haul Co.</h4>
-                <p><em>Where every pet gets their moment.</em></p>
-            </div>
+            <p class="love-letter">This isn't just a business for us. It's a love letter to Faye—and to pets everywhere.</p>
+            <h3>Welcome to The Pawfect Haul Co.</h3>
+            <p><em>Where every pet gets their moment.</em></p>
         </div>
     </section>
 
-    <main id="shop" class="product-section">
-        
-        <h2 id="lucky-scoops">Pawfect Lucky Scoops™</h2>
+    <main class="product-section" id="lucky-scoops">
+        <h2>Pawfect Lucky Scoops™</h2>
         <div class="product-grid">
-            <div class="product-card lucky-card">
-                <div class="product-image-container">
+            <div class="product-card">
+                <div class="img-container">
                     <span class="faye-badge">Faye's Choice 🐾</span>
-                    <img src="images/pawfect-scoop.png" alt="Signature Lucky Scoop" class="product-img">
+                    <img src="images/pawfect-scoop.png" alt="Signature Lucky Scoop">
                 </div>
                 <h3>Signature Lucky Scoop</h3>
                 <p>A surprise mystery haul!</p>
                 <p class="price">$15.00</p>
-                <button class="add-to-cart">Get Scooped!</button>
+                <button class="buy-btn">Get Scooped!</button>
             </div>
         </div>
 
         <h2 id="wear" style="margin-top: 60px;">Pawfect Wear</h2>
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://placedog.net/500/500" alt="Cozy Winter Sweater" class="product-img">
+                <div class="img-container">
+                    <img src="https://placedog.net/500/500" alt="Cozy Winter Sweater">
                 </div>
                 <h3>Cozy Winter Sweater</h3>
-                <p>$24.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <p class="price">$24.99</p>
+                <button class="buy-btn">Add to Cart</button>
             </div>
         </div>
     </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
