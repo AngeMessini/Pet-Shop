@@ -171,3 +171,69 @@ body {
     cursor: pointer;
     margin-top: 10px;
 }
+/* --- Professional Contact & Social Styling --- */
+.contact-section {
+    padding: 100px 5%;
+    background-color: #fffcfd;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(255, 126, 185, 0.08); /* Subtle pink glow */
+}
+
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ffe3ed;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ff7eb9;
+    border-bottom-color: #ff7eb9;
+    transform: translateY(-2px);
+}
+
+.social-title {
+    margin-top: 40px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.tiktok-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #000; /* TikTok Black */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.tiktok-btn:hover {
+    transform: scale(1.05);
+    background: #25F4EE; /* TikTok Cyan glow on hover */
+    color: #000;
+}
+
+.footer-note {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
