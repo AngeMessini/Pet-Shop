@@ -10,12 +10,24 @@
 <body>
 
     <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <div class="logo">The Pawfect Haul Co.</div>
+        
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#lucky-scoops">Pawfect Lucky Scoops™</a></li>
+            <li><a href="#lucky-scoops">Lucky Scoops™</a></li>
             <li><a href="#wear">Pawfect Wear</a></li>
-            <li><a href="#sale">Sale</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+            <li><a href="#promotions">New Seasonal Promotions</a></li>
+            <li><a href="#seasonal" class="badge-new">Seasonal</a></li>
+            <li><a href="#all">All</a></li>
             <li><a href="#" class="login-link">Login</a></li>
         </ul>
     </nav>
@@ -32,12 +44,11 @@
         <div class="about-container reveal">
             <h2 class="pink-text">Our Story</h2>
             <p class="subtitle pink-text">Meet Shontrice, Ange, & Faye</p>
-            <p>The Pawfect Haul Co was founded by husband-and-wife duo <strong>Shontrice and Ange</strong>, inspired by the one who truly runs the house—our dog, <strong>Faye</strong>.</p>
-            <p>Watching Faye's excitement reminded us how much joy pets bring into our lives. That joy sparked a bigger idea: why shouldn't every pet get that same feeling?</p>
+            <p>The Pawfect Haul Co was founded by husband-and-wife duo <strong>Shontrice and Ange</strong>, inspired by <strong>Faye</strong>.</p>
             
             <h2 class="pink-text" style="margin-top: 40px;">Our Belief</h2>
             <p><strong>Pets deserve to be spoiled just as much as we do.</strong></p>
-            <p>At The Pawfect Haul Co, we specialize in curated pet hauls. Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable. Each scoop reveals a surprise item, making every order unique and exciting.</p>
+            <p>Our signature <strong>bead scoop system</strong> makes every haul fun and unpredictable.</p>
 
             <div class="focus-box">
                 <ul>
@@ -47,15 +58,12 @@
                     <li>🐾 Spoiling pets in the most pawfect way possible</li>
                 </ul>
             </div>
-
-            <p class="love-letter">This isn't just a business for us. It's a love letter to Faye—and to pets everywhere.</p>
-            <h3>Welcome to The Pawfect Haul Co.</h3>
             <p><em>Where every pet gets their moment.</em></p>
         </div>
     </section>
 
-    <main class="product-section" id="lucky-scoops">
-        <h2>Pawfect Lucky Scoops™</h2>
+    <main class="product-section">
+        <h2 id="lucky-scoops">Pawfect Lucky Scoops™</h2>
         <div class="product-grid">
             <div class="product-card reveal">
                 <div class="img-container">
@@ -63,46 +71,33 @@
                     <img src="images/pawfect-scoop.png" alt="Signature Lucky Scoop">
                 </div>
                 <h3>Signature Lucky Scoop</h3>
-                <p>A surprise mystery haul!</p>
                 <p class="price">$15.00</p>
                 <button class="buy-btn">Get Scooped!</button>
             </div>
         </div>
 
-        <h2 id="wear" style="margin-top: 80px;">Pawfect Wear</h2>
+        <h2 id="seasonal" style="margin-top: 80px;">Seasonal Collection</h2>
         <div class="product-grid">
-            <div class="product-card reveal">
-                <div class="img-container">
-                    <img src="https://placedog.net/500/500" alt="Cozy Winter Sweater">
-                </div>
-                <h3>Cozy Winter Sweater</h3>
-                <p class="price">$24.99</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
+            <p>New seasonal styles coming soon!</p>
         </div>
+
+        <h2 id="all" style="margin-top: 80px;">All Products</h2>
+        <div class="product-grid">
+            </div>
     </main>
 
-    <section class="contact-section reveal">
+    <footer class="contact-section reveal">
         <div class="contact-container">
             <h2 class="pink-text">Questions for Faye?</h2>
-            <p>Whether you have a question about our Lucky Scoops™ or just want to say hi, we'd love to hear from you!</p>
-            
             <div class="contact-details">
-                <a href="mailto:support@thepawfecthaulco.com" class="contact-link">
-                    <span class="icon">📩</span> support@thepawfecthaulco.com
-                </a>
+                <a href="mailto:support@thepawfecthaulco.com" class="contact-link">📧 support@thepawfecthaulco.com</a>
             </div>
-
             <div class="social-links">
-                <p class="social-title">Join the pack on TikTok</p>
-                <a href="https://www.tiktok.com/@ThePawfectHaulCo" target="_blank" class="tiktok-btn">
-                    <span>♪</span> @ThePawfectHaulCo
-                </a>
+                <a href="https://www.tiktok.com/@ThePawfectHaulCo" target="_blank" class="tiktok-btn">♪ @ThePawfectHaulCo</a>
             </div>
-            
-            <p class="footer-note">© 2025 The Pawfect Haul Co. Handmade with love for your best friend. 🐾</p>
+            <p class="footer-note">© 2025 The Pawfect Haul Co. 🐾</p>
         </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>

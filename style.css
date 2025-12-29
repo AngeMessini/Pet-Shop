@@ -1,3 +1,12 @@
+/* --- Global Reset & Variables --- */
+:root {
+    --main-pink: #ff7eb9;
+    --soft-pink: #ffe3ed;
+    --white: #ffffff;
+    --dark-text: #333333;
+    --light-bg: #fdfdfd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,143 +15,157 @@
 }
 
 body {
-    background-color: #fdfdfd;
-    color: #333;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* --- Navigation --- */
+/* --- Navigation & Menu Logic --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: white;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .logo {
-    color: #ff7eb9;
+    color: var(--main-pink);
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: 'Playfair Display', serif;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--dark-text);
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ff7eb9;
+    color: var(--main-pink);
 }
 
-/* --- Hero Banner --- */
+.login-link {
+    background: var(--soft-pink);
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+/* Hide Mobile Elements on Desktop */
+.menu-toggle, .hamburger {
+    display: none;
+}
+
+/* --- Hero Section --- */
 .hero {
-    background-color: #ffe3ed;
-    height: 70vh;
+    background-color: var(--soft-pink);
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 80px; /* Space for the overlapping card */
+    padding-bottom: 100px; /* Space for card overlap */
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     margin-bottom: 10px;
-    color: #2d3436;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #ff7eb9;
+    background-color: var(--main-pink);
     color: white;
     padding: 14px 35px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     margin-top: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* --- The Floating Story Card --- */
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* --- The Professional Overlapping Story Card --- */
 .about-section {
-    padding: 0 5% 60px;
-    margin-top: -120px; /* This makes the card overlap the pink banner */
+    padding: 0 5% 80px;
+    margin-top: -100px; /* Pulls the card up over the hero */
 }
 
 .about-container {
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
-    background: white;
-    padding: 60px 50px;
+    background: var(--white);
+    padding: 60px 40px;
     border-radius: 30px;
     text-align: center;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.06);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.07);
 }
 
-.pink-text { color: #ff7eb9; }
+.pink-text { color: var(--main-pink); }
 
 .focus-box {
-    background-color: #fff0f6;
+    background-color: #fff9fb;
     display: inline-block;
-    padding: 30px 40px;
+    padding: 30px;
     border-radius: 20px;
     text-align: left;
     margin: 35px 0;
+    border: 1px solid var(--soft-pink);
 }
 
 .focus-box ul { list-style: none; }
 .focus-box li { margin-bottom: 12px; font-weight: 500; }
 
-/* --- Product Sections --- */
+/* --- Product Grid Styling --- */
 .product-section {
     padding: 60px 8%;
     text-align: center;
 }
 
-.product-section h2 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
 .product-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .product-card {
-    background: white;
-    padding: 25px;
+    background: var(--white);
+    padding: 20px;
     border-radius: 20px;
-    width: 350px;
-    transition: transform 0.3s ease;
+    width: 320px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-}
+.product-card:hover { transform: translateY(-10px); }
 
 .img-container {
     position: relative;
-    height: 320px;
-    overflow: hidden;
+    height: 300px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .img-container img {
@@ -155,85 +178,144 @@ body {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: #ff7eb9;
+    background: var(--main-pink);
     color: white;
-    font-size: 0.75rem;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 20px;
+    font-size: 0.7rem;
     font-weight: bold;
 }
 
+.price { font-weight: bold; margin: 10px 0; font-size: 1.1rem; }
+
 .buy-btn {
-    background: white;
-    border: 1px solid #ddd;
+    background: transparent;
+    border: 1px solid var(--dark-text);
     padding: 8px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    font-weight: 600;
 }
-/* --- Professional Contact & Social Styling --- */
+
+/* --- Professional Contact & TikTok Section --- */
 .contact-section {
-    padding: 100px 5%;
-    background-color: #fffcfd;
+    padding: 80px 5%;
     text-align: center;
 }
 
 .contact-container {
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto;
+    background: var(--white);
     padding: 50px;
-    background: white;
-    border-radius: 40px;
-    box-shadow: 0 10px 40px rgba(255, 126, 185, 0.08); /* Subtle pink glow */
-}
-
-.contact-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin: 20px 0;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ffe3ed;
-    transition: all 0.3s ease;
-}
-
-.contact-link:hover {
-    color: #ff7eb9;
-    border-bottom-color: #ff7eb9;
-    transform: translateY(-2px);
-}
-
-.social-title {
-    margin-top: 40px;
-    font-weight: 600;
-    color: #888;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    border-radius: 30px;
 }
 
 .tiktok-btn {
     display: inline-block;
-    margin-top: 15px;
-    background: #000; /* TikTok Black */
+    margin-top: 20px;
+    background: #000;
     color: #fff;
-    padding: 12px 25px;
+    padding: 12px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s;
 }
 
-.tiktok-btn:hover {
-    transform: scale(1.05);
-    background: #25F4EE; /* TikTok Cyan glow on hover */
-    color: #000;
+/* --- MOBILE FIXES (Hamburger on Left) --- */
+@media (max-width: 992px) {
+    .navbar {
+        justify-content: flex-start; /* Aligns hamburger/logo to left */
+        gap: 20px;
+        padding: 15px 5%;
+    }
+
+    .hamburger {
+        display: flex; /* Show icon */
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        order: -1; /* Forces it to the absolute left */
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--main-pink);
+        border-radius: 2px;
+    }
+
+    .nav-links {
+        display: none; /* Hidden until checkbox clicked */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #f9f9f9;
+        padding: 10px 0;
+    }
+
+    .hero h1 { font-size: 2.2rem; }
+    .about-section { margin-top: -60px; }
 }
 
-.footer-note {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    color: #bbb;
+/* --- Reveal Animation Classes --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- "NEW" Badge for Menu --- */
+.badge-new {
+    position: relative;
+}
+
+.badge-new::after {
+    content: "NEW";
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    background-color: var(--main-pink);
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    animation: bounce 2s infinite; /* Makes the badge attract attention */
+}
+
+/* Subtle bounce animation for the badge */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/* Adjust for mobile menu so the badge doesn't overlap text below it */
+@media (max-width: 992px) {
+    .badge-new::after {
+        top: 0;
+        right: -35px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
