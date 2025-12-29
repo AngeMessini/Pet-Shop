@@ -442,3 +442,67 @@ body {
     .faye-chat-wrapper { bottom: 20px; right: 20px; }
     .chat-window { width: calc(100vw - 40px); }
 }
+/* --- Centered & Bold Flash Sale Bar --- */
+.promo-bar {
+    background-color: #2d3436; /* Professional Dark Grey/Black */
+    color: white;
+    padding: 12px 5%;
+    width: 100%;
+    z-index: 1100;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adds even space between tag, text, and link */
+    flex-wrap: wrap; /* Ensures it looks good on mobile */
+    text-align: center;
+}
+
+.promo-content strong {
+    font-weight: 800; /* Extra bold for the countdown text */
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.promo-tag {
+    background: #ff7eb9; /* Faye's Pink */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    animation: pulse-pink 2s infinite;
+}
+
+.promo-link {
+    color: #ffe3ed; /* Soft Pink */
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.promo-link:hover {
+    color: white;
+}
+
+/* Pulse animation for the FLASH SALE tag */
+@keyframes pulse-pink {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 126, 185, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 126, 185, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 126, 185, 0); }
+}
+
+/* Mobile Fix: Stack elements if the screen is too narrow */
+@media (max-width: 768px) {
+    .promo-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
