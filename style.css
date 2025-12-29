@@ -319,3 +319,126 @@ body {
         vertical-align: middle;
     }
 }
+/* --- Ask Faye Chat Styles --- */
+.faye-chat-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chat-toggle {
+    display: none;
+}
+
+/* The Dog Bubble */
+.chat-bubble {
+    background-color: var(--main-pink);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 126, 185, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.chat-bubble:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.dog-icon { font-size: 1.5rem; }
+.bubble-text { font-weight: 700; font-size: 0.9rem; }
+
+/* The Chat Window */
+.chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+    display: none; /* Hidden by default */
+    overflow: hidden;
+    transform-origin: bottom right;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Show chat when checkbox is checked */
+.chat-toggle:checked ~ .chat-window {
+    display: block;
+}
+
+.chat-header {
+    background: var(--soft-pink);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.faye-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.chat-status { display: flex; flex-direction: column; }
+.chat-status strong { font-size: 0.9rem; color: var(--dark-text); }
+.chat-status span { font-size: 0.7rem; color: #777; }
+
+.close-chat {
+    margin-left: auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--main-pink);
+}
+
+.chat-body {
+    padding: 20px;
+    background: #fffcfd;
+}
+
+.faye-msg {
+    background: white;
+    padding: 12px;
+    border-radius: 15px 15px 15px 0;
+    font-size: 0.85rem;
+    border: 1px solid #eee;
+    line-height: 1.4;
+}
+
+.chat-footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.bark-btn {
+    display: block;
+    background: var(--main-pink);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.bark-btn:hover { opacity: 0.9; }
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .faye-chat-wrapper { bottom: 20px; right: 20px; }
+    .chat-window { width: calc(100vw - 40px); }
+}
